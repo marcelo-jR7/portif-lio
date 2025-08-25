@@ -5,8 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portifolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">">
 </head>
 <body>
+
+    <header>
+        <h1>Meu portfólio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contatos">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
     
+
+    <section id="sobre" class="section" >
+        <h2>Sobre Mim</h2>
+        <img src="images/Captura de tela 2025-08-19 080155.png" alt="Foto de perfil" class="perfil">
+
+        <p> Olá! Meu nome é Marcelo Junior, sou aluno do curso Técnico de Desenvolvimento de sistemas na escola  Monsenhor Sarrion, e este é meu portfólio.
+            Aqui você encontra alguns projetos que desenvolvi durante o curso.
+        </p>
+    </section>
+
+    <section id="projetos" class="section">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-container">
+            <div class="card">
+                <img src="https://picsum.photos/300/200?randon=1" alt="Projeto 1" loading="lazy">
+                <h3>Projeto 1</h3>
+                <p>Descrição do Projeto 1.</p>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?randon=1" alt="Projeto 1" loading="lazy">
+                <h3>Projeto 2</h3>
+                <p>Descrição do Projeto 2.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="section">
+        <h2>Contatos</h2>
+        <p class="subtitle">Estou disponível para oportunidades e colaborações!</p>
+        <div class="contact-grid">
+           
+        </div>
+    </section><section id="contatos" class="section">
+        <h2>Contatos</h2>
+        <p class="subtitle">Estou disponível para oportunidades e colaborações!</p>
+
+        <div class="contact-grid">
+            <div class="fa-contact-card">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>E-mail</h3>
+                    <a href="mailto:marcelojjunior613@gmail.com">marcelojjunior613@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <h3>Celular</h3>
+                    <span>(18) 98144-8063</span>
+                </div>
+            </div>
+             
+            <div class="social-box">
+                <h3>Redes Sociais</h3>
+                <div class="Social-Links">
+                    <a href="https://www.linkedin.com/in/marcelo-dos-santos-junior-821a28311" class="btn linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                        linkedIn
+                    </a>
+                    <a href="https://github.com/marcelo-jR7" class="btn github" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - portfólio Marcelo Junior</p>
+    </footer>
+
+    <script>
+        // Função para fade-in ao scroll
+        const sections = document.querySelectorAll('.section');
+        const options = {
+          threshold: 0.1
+        };
+     
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, options);
+     
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      </script>
 </body>
 </html>
